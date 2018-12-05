@@ -2,8 +2,7 @@ let prometheus = require('prom-client')
 
 let processingTime = new prometheus.Histogram({
   name: 'logux_request_processing_time_histogram',
-  help: 'How long action was processed',
-  buckets: [1, 50, 100, 500, 1000, 5000, 10000]
+  help: 'How long action was processed'
 })
 
 let clientCount = new prometheus.Gauge({
